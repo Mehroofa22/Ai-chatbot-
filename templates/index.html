@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexa AI - Intelligent Chatbot</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="brand">
+            <span class="brand-logo">🤖</span>
+            <h1>Nexa AI</h1>
+        </div>
+
+        <button id="newChat" class="btn-new-chat">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            New Conversation
+        </button>
+
+        <div class="sidebar-menu">
+            <div class="menu-section">
+                <h3>System Capabilities</h3>
+                <ul>
+                    <li>
+                        <span class="icon">⚡</span>
+                        <div class="text">
+                            <strong>Instant Response</strong>
+                            <p>Powered by Gemini 2.5 Flash</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="icon">🔒</span>
+                        <div class="text">
+                            <strong>Secure Processing</strong>
+                            <p>Safe prompt filters active</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="icon">🎨</span>
+                        <div class="text">
+                            <strong>Rich Rendering</strong>
+                            <p>Formatting & Code support</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="sidebar-footer">
+            <div class="status-indicator">
+                <span class="pulse-dot"></span>
+                <span>All Systems Active</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Chat Area -->
+    <div class="main">
+        <div class="chat-header">
+            <div class="bot-info">
+                <span class="status-dot"></span>
+                <span class="bot-name">Nexa Assistant</span>
+                <span class="bot-status-text">Online</span>
+            </div>
+            <div class="model-badge">GEMINI 1.5 FLASH</div>
+        </div>
+
+        <div class="chat-box" id="chatBox">
+            <div class="message-wrapper bot">
+                <div class="avatar">🤖</div>
+                <div class="message-content">
+                    👋 Hello! I'm <strong>Nexa AI</strong>, a next-generation assistant powered by Google Gemini. How can I help you today?
+                </div>
+            </div>
+        </div>
+
+        <div class="input-container">
+            <div class="input-wrapper">
+                <input
+                    type="text"
+                    id="userInput"
+                    placeholder="Type a message or ask something..."
+                    autocomplete="off"
+                >
+                <button id="sendBtn" title="Send Message">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
